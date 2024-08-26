@@ -1,0 +1,42 @@
+{
+  "dependencies": {
+    "axios": "*",
+    "body-parser": "*",
+    "cors": "*",
+    "date-fns": "^3.6.0",
+    "ejs": "^3.1.10",
+    "express": "*",
+    "joi": "*",
+    "kafkajs": "^2.2.4",
+    "mongoose": "*",
+    "nodemon": "*",
+    "qs": "*",
+    "winston": "*",
+    "winston-daily-rotate-file": "*",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@types/cookie-parser": "*",
+    "@types/cors": "*",
+    "@types/express": "*",
+    "@types/http-server": "^0.12.4",
+    "@types/node": "*",
+    "@types/request": "*",
+    "@types/ws": "^8.5.12",
+    "@typescript-eslint/eslint-plugin": "*",
+    "@typescript-eslint/parser": "*",
+    "colors": "*",
+    "dotenv": "^16.4.5",
+    "eslint": "*",
+    "nodemon": "*",
+    "prettier": "*",
+    "supertest": "*",
+    "ts-jest": "*",
+    "ts-node": "*",
+    "typescript": "*"
+  },
+  "scripts": {
+    "start": "ts-node src/app.ts",
+    "dev": "nodemon"
+  }
+}

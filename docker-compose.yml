@@ -1,0 +1,29 @@
+version: '1'
+services:
+  monogodb:
+    image: 'mongo'
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: mongo
+      MONGO_INITDB_ROOT_PASSWORD: mongo
+      MONGO_INITDB_DATABASE: StockTraders
+    ports:
+      - 27017:27017
+  api:
+    build:
+      context: ./StockTraders-Web-Api
+      dockerfile: Dockerfile
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=mongo
+      - MONGO_INITDB_ROOT_PASSWORD=mongo
+      - MONGO_INITDB_DATABASE=StockTraders
+      - MONGO_PORT=27017
+      - MONGO_HOST=monogodb
+    ports:
+      - "3000:3000"
+  client:
+    build:
+      context: ./Client
+      dockerfile: Dockerfile
+    ports:
+      - "3050:3050"
